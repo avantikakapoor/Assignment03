@@ -1,0 +1,3 @@
+"0","#Importing my dataset"
+"0","health <- read.csv(""HealthCoverage.csv"")"
+"0","health"
