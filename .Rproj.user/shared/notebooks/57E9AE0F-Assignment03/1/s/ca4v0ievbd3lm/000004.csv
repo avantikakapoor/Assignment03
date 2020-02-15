@@ -1,0 +1,8 @@
+"0","#Graph 3"
+"0","ggplot(health, aes(rate2010, rate2015, color = State)) +"
+"0","  geom_point() +"
+"0","  geom_line() +"
+"0","  xlab(""Uninsured Rate in 2010"") +"
+"0","  ylab(""Uninsured Rate in 2015"") +"
+"0","  ggtitle(""Percentage of Uninsured Population - 2010 vs. 2015"") +"
+"0","  annotate(""text"", label = caption, hjust = 0, vjust=1, size=4)"

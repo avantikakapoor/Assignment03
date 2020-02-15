@@ -21,3 +21,56 @@ health <- read.csv("HealthCoverage.csv")
 health
 ```
 
+```{r}
+library(ggplot2)
+library(dplyr)
+library(magrittr)
+library(tidyverse)
+library(scales)
+```
+
+```{r}
+#Graph 1
+caption <- paste(strwrap("Source: kaggle.com", 40),collapse="\n") #I am trying to add this as the source in the graph
+
+
+ggplot(health, aes(State, rate2010, color = stateexpansion)) +
+  geom_point() +
+  xlab("State") +
+  ylab("Uninsured Rate in 2010") +
+  ggtitle("Percentage of Uninsured Population in 2010 by State") +
+  annotate("text", label = caption, hjust = 0, vjust=1, size=4)
+```
+
+```{r}
+#Graph 2
+ggplot(health, aes(State, rate2015, shape = stateexpansion)) +
+  geom_point() +
+  xlab("State") +
+  ylab("Uninsured Rate in 2015") +
+  ggtitle("Percentage of Uninsured Population in 2015 by State") +
+  annotate("text", label = caption, hjust = 0, vjust=1, size=4)
+```
+
+```{r}
+#Graph 3
+
+ggplot(health, aes(rate2010, rate2015, color = State)) +
+  geom_point() +
+  geom_line() +
+  xlab("Uninsured Rate in 2010") +
+  ylab("Uninsured Rate in 2015") +
+  ggtitle("Percentage of Uninsured Population - 2010 vs. 2015") +
+  annotate("text", label = caption, hjust = 0, vjust=1, size=4)
+```
+```{r}
+#Graph 4
+
+ggplot(health, aes(State, employer2015)) +
+  geom_line() +
+  xlab("State") +
+  ylab("State Expansion") +
+  ggtitle("Whether the State Had Medicaid Expansion in 2016") +
+  annotate("text", label = caption, hjust = 0, vjust=1, size=4)
+```
+
