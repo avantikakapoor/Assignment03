@@ -1,0 +1,6 @@
+"0","#Graph 3"
+"0","ggplot(health, aes(State, credit2016)) +"
+"0","  geom_boxplot() +"
+"0","  xlab(""State"") +"
+"0","  ylab(""Average Monthly Tax Credit"") +"
+"0","  ggtitle(""Average Monthly Tax Credit by State in 2016"")"

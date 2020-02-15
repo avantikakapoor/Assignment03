@@ -55,13 +55,11 @@ ggplot(health, aes(State, rate2015, shape = stateexpansion)) +
 ```{r}
 #Graph 3
 
-ggplot(health, aes(rate2010, rate2015, color = State)) +
-  geom_point() +
-  geom_line() +
-  xlab("Uninsured Rate in 2010") +
-  ylab("Uninsured Rate in 2015") +
-  ggtitle("Percentage of Uninsured Population - 2010 vs. 2015") +
-  annotate("text", label = caption, hjust = 0, vjust=1, size=4)
+ggplot(health, aes(State, credit2016)) +
+  geom_boxplot() +
+  xlab("State") +
+  ylab("Average Monthly Tax Credit") +
+  ggtitle("Average Monthly Tax Credit by State in 2016")
 ```
 ```{r}
 #Graph 4
