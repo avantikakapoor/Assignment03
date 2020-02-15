@@ -1,0 +1,7 @@
+"0","#Graph 2"
+"0","ggplot(health, aes(State, rate2015, shape = stateexpansion)) +"
+"0","  geom_point() +"
+"0","  xlab(""State"") +"
+"0","  ylab(""Uninsured Rate in 2015"") +"
+"0","  ggtitle(""Percentage of Uninsured Population in 2015 by State"") +"
+"0","  annotate(""text"", label = caption, hjust = 0, vjust=1, size=4)"
