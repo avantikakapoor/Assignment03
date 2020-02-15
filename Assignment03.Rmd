@@ -66,6 +66,8 @@ ggplot(health, aes(State, credit2016)) +
   xlab("State") +
   ylab("Average Monthly Tax Credit") +
   ggtitle("Average Monthly Tax Credit by State in 2016")
+
+#A tax credit can be used to lower the monthly insurance payments in the marketplace. Alaska had the highest tax credit, wheras Arizona had the lowest. While we would need a lot more information, it could be puzzling to see why Alaska had such a low marketplace insurance coverage when it had the highest tax credit. California, with the highest overall coverage, stood somewhere in the middle. 
 ```
 ```{r}
 #Graph 4
@@ -83,6 +85,6 @@ ggplot(health, aes(marketplace2016, employer2015, color = State)) +
 ```
 
 ```{r}
-#I think I did not choose a dataset that could properly geoms such as histograms, frequency polygons, line graphs, and area plots. I tried doing it but got errors. 
+#I think I did not choose a dataset that could properly plot geoms such as histograms, frequency polygons, line graphs, and area plots. I tried doing it but got errors. 
 ```
 
