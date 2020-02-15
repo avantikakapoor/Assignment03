@@ -1,5 +1,5 @@
 "0","#Graph 2"
-"0","ggplot(health, aes(State, rate2015, color = stateexpansion)) +"
+"0","ggplot(health, aes(State, rate2015, shape = stateexpansion)) +"
 "0","  geom_point() +"
 "0","  xlab(""State"") +"
 "0","  ylab(""Uninsured Rate in 2015"") +"

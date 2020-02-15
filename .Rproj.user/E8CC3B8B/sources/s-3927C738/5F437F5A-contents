@@ -34,22 +34,28 @@ library(scales)
 caption <- paste(strwrap("Source: kaggle.com", 40),collapse="\n") #I am trying to add this as the source in the graph
 
 
-ggplot(health, aes(State, rate2010, color = stateexpansion)) +
+ggplot(health, aes(State, Medicaid2013, color = credit2016, fill = credit2016)) +
   geom_point() +
   xlab("State") +
-  ylab("Uninsured Rate in 2010") +
-  ggtitle("Percentage of Uninsured Population in 2010 by State") +
+  ylab("Medicaid Coverage in 2013") +
+  ggtitle("Medicaid Coverage in 2013 by State") +
   annotate("text", label = caption, hjust = 0, vjust=1, size=4)
+
+#This graph shows the coverage of Medicaid in 2013 for Alabama, Alaska, Arizona, Arkansas, and California. In comparing the liberal to conservative states (which are against public coverage of healthcare), we can look at the coverage for Alabama and California for a stark contrast. While only 799,176 people in Alabama were covered under Medicaid, around 7.7 million people in California were covered under it. 
 ```
 
 ```{r}
 #Graph 2
-ggplot(health, aes(State, rate2015, color = stateexpansion)) +
+ggplot(health, aes(State, rate2015, shape = stateexpansion)) +
   geom_point() +
   xlab("State") +
   ylab("Uninsured Rate in 2015") +
   ggtitle("Percentage of Uninsured Population in 2015 by State") +
   annotate("text", label = caption, hjust = 0, vjust=1, size=4)
+
+#I cannot understand why the y-axis scale is not in a descending order. I tried adding a limit to y but it showed an error. 
+
+#This graph shows the percentage of uninsured population in 2015 for the five states under study. The graph also depics whether the particular state opted for state Medicaid expansion (TRUE) or not (FALSE). As expected, California had the lowest rate of uninsured (8.6%), while Alaska stood at 14.9%. California opted for the expansion which could explain the low rate of the uninsured, but Alaska opted for it too, so we cannot infer causation. 
 ```
 
 ```{r}
@@ -72,5 +78,11 @@ ggplot(health, aes(marketplace2016, employer2015, color = State)) +
   ylim(300000, 20000000) +
   ggtitle("Marketplace vs. Employer Coverage by State") +
   annotate("text", label = caption, hjust = 0, vjust=1, size=4)
+
+#The graph below compares coverage for the states - Marketplace coverage in 2015 versus employer-sponsored coverage in 2016 (by the number of people). As expected, California has a very high employer coverage compared to the other states. In all the states, employer-sponsored insurance has a higher coverage than marketplace coverage (which could be due to asymmetric market information - employers are obligated to provide insurance to all employees regardless of health status, wheras in the marketplace, a person in poor health may face a high premium, which could deter the from purchasing coverage). The lowest coverage is for Alaska. 
+```
+
+```{r}
+#I think I did not choose a dataset that could properly geoms such as histograms, frequency polygons, line graphs, and area plots. I tried doing it but got errors. 
 ```
 
