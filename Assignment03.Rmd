@@ -44,7 +44,7 @@ ggplot(health, aes(State, rate2010, color = stateexpansion)) +
 
 ```{r}
 #Graph 2
-ggplot(health, aes(State, rate2015, shape = stateexpansion)) +
+ggplot(health, aes(State, rate2015, color = stateexpansion)) +
   geom_point() +
   xlab("State") +
   ylab("Uninsured Rate in 2015") +
@@ -64,11 +64,13 @@ ggplot(health, aes(State, credit2016)) +
 ```{r}
 #Graph 4
 
-ggplot(health, aes(State, employer2015)) +
-  geom_line() +
-  xlab("State") +
-  ylab("State Expansion") +
-  ggtitle("Whether the State Had Medicaid Expansion in 2016") +
+ggplot(health, aes(marketplace2016, employer2015, color = State)) +
+  geom_jitter() +
+  xlab("Marketplace Insurace Coverage in 2015") +
+  ylab("Employer Insurance Coverage in 2016") +
+  xlim(17000, 15000000) +
+  ylim(300000, 20000000) +
+  ggtitle("Marketplace vs. Employer Coverage by State") +
   annotate("text", label = caption, hjust = 0, vjust=1, size=4)
 ```
 

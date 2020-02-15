@@ -1,7 +1,0 @@
-"0","#Graph 4"
-"0","ggplot(health, aes(State, employer2015)) +"
-"0","  geom_line() +"
-"0","  xlab(""State"") +"
-"0","  ylab(""State Expansion"") +"
-"0","  ggtitle(""Whether the State Had Medicaid Expansion in 2016"") +"
-"0","  annotate(""text"", label = caption, hjust = 0, vjust=1, size=4)"
